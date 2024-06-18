@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>D3.js Germany Map Example</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    
+    <link rel="stylesheet" href="css/nav-bar.css">
+
+    <style>
+        .map-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
+        }
+
+        .place-pointer {
+            stroke: black;
+            stroke-width: 1px;
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: auto;
+            height: auto;
+            padding: 5px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .bundesland {
+            stroke: #000;
+            stroke-width: 0.5px;
+            cursor: pointer;
+        }
+
+        .bundesland:hover {
+            fill: rgba(79, 79, 79, 0.178);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <a class="nav-item" href="home.html">Home</a>
+        <a class="nav-item" href="first_level.html">First Level</a>
+        <a class="nav-item" href="second_level.html">Second Level</a>
+        <a class="nav-item active" href="map_level.html">Map Level</a>
+    </div>
+
+    
+    <div id="map" class="map-container"></div>
+    <div id="tooltip" class="tooltip"></div>
+    <script>
+        fetch('data/map/bundeslaender.json')
+            .then(response => response.json())
+            .then(bundeslaender => {
+                console.log(bundeslaender);
+                const berlinData = bundeslaender['Berlin'];
+
+                // Print all keys to verify the structure
+                console.log(berlinData);
+                drawMap(bundeslaender);
+                //addClassStylingForBundeslaender(bundeslaender);
+            })
+            .catch(error => {
+                console.error('Error loading the JSON file:', error);
+            });
+
+        function calculateColor(bundesland) {
+            const female = bundesland['female'];
+            const total = bundesland['total'];
+            const value = female / total;
+            var h = (1.0 - value) * 240
+            return "hsl(" + h + ", 100%, 50%)";
+            //var colorScale = d3.scale.linear()
+            //    .domain([0, 0.5, 1])
+            //    .range(["#2c7bb6", "#ffff8c", "#d7191c"])
+            //    .interpolate(d3.interpolateHcl);
+
+        }
+
+
+        function drawMap(bundeslaender_info) {
+            // Dimensions for the map
+            const width = 960;
+            const height = 600;
+
+            // Create an SVG element
+            const svg = d3.select("#map").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            // Projection and path for the map
+            const projection = d3.geoMercator()
+                .center([10.4515, 51.1657]) // Centered on Germany
+                .scale(2500)
+                .translate([width / 2, height / 2]);
+
+            const path = d3.geoPath().projection(projection);
+
+            // Tooltip
+            const tooltip = d3.select("#tooltip");
+
+            // Load and display the Germany map
+            d3.json("data/map/1_sehr_hoch.geo.json").then(function (data) {
+                const bundeslaender = data.features; // Extract features (Bundesländer) from the GeoJSON data
+
+                // Draw Bundesländer borders and add interactions
+                svg.selectAll(".bundesland")
+                    .data(bundeslaender)
+                    .enter().append("path") // Create a new path for each Bundesland
+                    .attr("d", path)
+                    .attr("class", function (d) { return "bundesland " + d.properties.name.replace(/\s+/g, '_').toLowerCase(); }) // create class from Bundeland name
+                    /*
+                    Add interactions:
+                    Hovering -> Starts with mouseover, ends with mousout (remove altert?)
+                    Tooltip appears / disappears with a transition effect
+                    */
+                    .on("mouseover", function (event, d) {
+                        // Hover color
+                        let color = calculateColor(bundeslaender_info[d.properties.name]);
+                        d3.select(this).style("fill", d3.color(color).darker());
+
+                        // Tooltip appears with a transition effect
+                        tooltip.transition()
+                            .duration(200) // Duration of the transition in milliseconds
+                            .style("opacity", .9); // Set tooltip opacity to make it visible
+
+                        // Set the tooltip content and position it relative to the mouse coordinates
+                        tooltip.html(d.properties.name + "<br/>Female: " + (bundeslaender_info[d.properties.name]['female'] / bundeslaender_info[d.properties.name]['total'] * 100).toFixed(2) + "%") // TODO add more information
+                            .style("left", (event.pageX) + "px") // Position the tooltip horizontally (using mouse position)
+                            .style("top", (event.pageY - 28) + "px"); // Position the tooltip vertically (using mouse position)
+                    })
+                    .on("mouseout", function (event, d) {
+                        // Tooltip disappears with a transition effect
+
+                        tooltip.transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                        // Hover color
+                        console.log(d)
+                        console.log(d.properties.name);
+                        console.log(bundeslaender_info[d.properties.name])
+                        let color = calculateColor(bundeslaender_info[d.properties.name]);
+                        d3.select(this).style("fill", d3.color(color));
+                    })
+                    .on("click", function (event, d) {
+                        // Display an alert with information about the Bundesland when clicked
+                        alert("Info about " + d.properties.name);
+                    })
+                    // Add Styling
+                    .style("fill", function (d) {
+                        return calculateColor(bundeslaender_info[d.properties.name]);
+                    });
+
+
+                // Add place pointers
+                const places = [
+                    { name: "Berlin", coordinates: [13.4050, 52.5200], color: "red", info: "Capital of Germany" },
+                    { name: "Hamburg", coordinates: [9.9937, 53.5511], color: "green", info: "Major port city" },
+                    { name: "Munich", coordinates: [11.5820, 48.1351], color: "blue", info: "Known for Oktoberfest" }
+                ];
+
+                svg.selectAll(".place-pointer")
+                    .data(places)
+                    .enter().append("circle")
+                    .attr("class", "place-pointer")
+                    .attr("cx", d => projection(d.coordinates)[0])
+                    .attr("cy", d => projection(d.coordinates)[1])
+                    .attr("r", 5)
+                    .style("fill", d => d.color)
+                    .on("mouseover", function (event, d) {
+                        tooltip.transition()
+                            .duration(200)
+                            .style("opacity", .9);
+                        tooltip.html(d.name + "<br/>" + d.info)
+                            .style("left", (event.pageX) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                    })
+                    .on("click", function (event, d) {
+                        alert("Info about " + d.name + ": " + d.info);
+                    })
+                    .append("title")
+                    .text(d => d.name);
+            });
+        }
+    </script>
+</body>
+
+</html>

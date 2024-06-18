@@ -1,0 +1,81 @@
+{"Baden-Württemberg": {
+        "female": 1927,
+        "male": 5794,
+        "total": 7721
+    },
+    "Bayern": {
+        "female": 1932,
+        "male": 5911,
+        "total": 7843
+    },
+    "Berlin": {
+        "female": 1389,
+        "male": 2472,
+        "total": 3861
+    },
+    "Brandenburg": {
+        "female": 353,
+        "male": 690,
+        "total": 1043
+    },
+    "Bremen": {
+        "female": 234,
+        "male": 478,
+        "total": 712
+    },
+    "Hamburg": {
+        "female": 612,
+        "male": 1326,
+        "total": 1938
+    },
+    "Hessen": {
+        "female": 1154,
+        "male": 2816,
+        "total": 3970
+    },
+    "Mecklenburg-Vorpommern": {
+        "female": 238,
+        "male": 650,
+        "total": 888
+    },
+    "Niedersachsen": {
+        "female": 1110,
+        "male": 2690,
+        "total": 3800
+    },
+    "Nordrhein-Westfalen": {
+        "female": 3110,
+        "male": 7529,
+        "total": 10639
+    },
+    "Rheinland-Pfalz": {
+        "female": 591,
+        "male": 1611,
+        "total": 2202
+    },
+    "Saarland": {
+        "female": 122,
+        "male": 401,
+        "total": 523
+    },
+    "Sachsen": {
+        "female": 613,
+        "male": 1785,
+        "total": 2398
+    },
+    "Sachsen-Anhalt": {
+        "female": 264,
+        "male": 820,
+        "total": 1084
+    },
+    "Schleswig-Holstein": {
+        "female": 321,
+        "male": 918,
+        "total": 1239
+    },
+    "Thüringen": {
+        "female": 356,
+        "male": 944,
+        "total": 1300
+    }
+}

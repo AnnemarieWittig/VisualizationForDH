@@ -1,0 +1,4 @@
+= Data Operations Done
+
+- transform link:https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Hochschulen/_inhalt.html#_qvexoqao0[Statistischer Bericht - Statistik des Hochschulpersonals 2022] Table 21341-06 into suitable csv format link:file://./bundeslanddata.csv[bundeslanddata.csv] (manually done)
+- transform link:file://./bundeslanddata.csv[bundeslanddata.csv] to json (pythonscript)
