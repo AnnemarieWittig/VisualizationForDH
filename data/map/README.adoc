@@ -2,3 +2,6 @@
 
 - transform link:https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Hochschulen/_inhalt.html#_qvexoqao0[Statistischer Bericht - Statistik des Hochschulpersonals 2022] Table 21341-06 into suitable csv format link:file://./bundeslanddata.csv[bundeslanddata.csv] (manually done)
 - transform link:file://./bundeslanddata.csv[bundeslanddata.csv] to json (pythonscript)
+
+- extend link:https://vsvbb.de/uni-frauenquote-2023/[University Table] with coordinates from google maps (manually done)
+- transform link:file://./universities.csv[universities.csv] to json (pythonscript)

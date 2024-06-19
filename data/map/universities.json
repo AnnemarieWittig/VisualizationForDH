@@ -1,0 +1,687 @@
+[
+    {
+        "name": "Universität Potsdam",
+        "rang": 1,
+        "total_professors": 274,
+        "female_professors": 111,
+        "female_quota": "40,51",
+        "junior_professors": "28",
+        "female_junior_professors": "17",
+        "junior_female_quota": "60,71",
+        "coordinates": [
+            12.97623086008567,
+            52.40856203562808
+        ],
+        "total_professors_combined": 302.0,
+        "total_female_quota": 42.384105960264904
+    },
+    {
+        "name": "IU Internationale Hochschule",
+        "rang": 2,
+        "total_professors": 671,
+        "female_professors": 261,
+        "female_quota": "38,90",
+        "junior_professors": "0",
+        "female_junior_professors": "0",
+        "junior_female_quota": "0,00",
+        "coordinates": [
+            7.228713030093275,
+            50.642206183885094
+        ],
+        "total_professors_combined": 671.0,
+        "total_female_quota": 38.89716840536513
+    },
+    {
+        "name": "Humboldt-Universität zu Berlin",
+        "rang": 3,
+        "total_professors": 458,
+        "female_professors": 178,
+        "female_quota": "38,86",
+        "junior_professors": "46",
+        "female_junior_professors": "31",
+        "junior_female_quota": "67,39",
+        "coordinates": [
+            13.39453486445804,
+            52.51807885889721
+        ],
+        "total_professors_combined": 504.0,
+        "total_female_quota": 41.46825396825397
+    },
+    {
+        "name": "Universität Bielefeld",
+        "rang": 4,
+        "total_professors": 340,
+        "female_professors": 130,
+        "female_quota": "38,24",
+        "junior_professors": "32",
+        "female_junior_professors": "17",
+        "junior_female_quota": "53,13",
+        "coordinates": [
+            8.495584584682918,
+            52.03725134075457
+        ],
+        "total_professors_combined": 372.0,
+        "total_female_quota": 39.516129032258064
+    },
+    {
+        "name": "Universität Koblenz",
+        "rang": 5,
+        "total_professors": 69,
+        "female_professors": 25,
+        "female_quota": "36,23",
+        "junior_professors": "7",
+        "female_junior_professors": "1",
+        "junior_female_quota": "14,29",
+        "coordinates": [
+            7.558120399178285,
+            50.363719242931886
+        ],
+        "total_professors_combined": 76.0,
+        "total_female_quota": 34.21052631578947
+    },
+    {
+        "name": "Universität Bremen",
+        "rang": 6,
+        "total_professors": 314,
+        "female_professors": 105,
+        "female_quota": "33,44",
+        "junior_professors": "10",
+        "female_junior_professors": "5",
+        "junior_female_quota": "50,00",
+        "coordinates": [
+            8.855304191516964,
+            53.10687029093993
+        ],
+        "total_professors_combined": 324.0,
+        "total_female_quota": 33.95061728395062
+    },
+    {
+        "name": "Universität Hamburg",
+        "rang": 7,
+        "total_professors": 682,
+        "female_professors": 224,
+        "female_quota": "32,84",
+        "junior_professors": "68",
+        "female_junior_professors": "38",
+        "junior_female_quota": "55,88",
+        "coordinates": [
+            9.98814667119336,
+            53.56355924646655
+        ],
+        "total_professors_combined": 750.0,
+        "total_female_quota": 34.93333333333333
+    },
+    {
+        "name": "Justus-Liebig-Universität Gießen",
+        "rang": 8,
+        "total_professors": 333,
+        "female_professors": 109,
+        "female_quota": "32,73",
+        "junior_professors": "3",
+        "female_junior_professors": "2",
+        "junior_female_quota": "66,67",
+        "coordinates": [
+            8.67734646466963,
+            50.58130859132681
+        ],
+        "total_professors_combined": 336.0,
+        "total_female_quota": 33.035714285714285
+    },
+    {
+        "name": "Westfälische Wilhelms-Universität Münster",
+        "rang": 9,
+        "total_professors": 521,
+        "female_professors": 163,
+        "female_quota": "31,29",
+        "junior_professors": "37",
+        "female_junior_professors": "19",
+        "junior_female_quota": "51,35",
+        "coordinates": [
+            7.613386500513499,
+            51.96375880802679
+        ],
+        "total_professors_combined": 558.0,
+        "total_female_quota": 32.61648745519714
+    },
+    {
+        "name": "Universität Kassel",
+        "rang": 10,
+        "total_professors": 287,
+        "female_professors": 89,
+        "female_quota": "31,01",
+        "junior_professors": "keine Angabe",
+        "female_junior_professors": "keine Angabe",
+        "junior_female_quota": "keine Angabe",
+        "coordinates": [
+            9.477276954356686,
+            51.333928794044866
+        ],
+        "total_professors_combined": "keine Angabe",
+        "total_female_quota": "keine Angabe"
+    },
+    {
+        "name": "Ruhr-Universität Bochum",
+        "rang": 11,
+        "total_professors": 492,
+        "female_professors": 152,
+        "female_quota": "30,89",
+        "junior_professors": "54",
+        "female_junior_professors": "28",
+        "junior_female_quota": "51,85",
+        "coordinates": [
+            7.2613186233679325,
+            51.44707307427591
+        ],
+        "total_professors_combined": 546.0,
+        "total_female_quota": 32.967032967032964
+    },
+    {
+        "name": "Bergische Universität Wuppertal",
+        "rang": 12,
+        "total_professors": 277,
+        "female_professors": 85,
+        "female_quota": "30,69",
+        "junior_professors": "23",
+        "female_junior_professors": "12",
+        "junior_female_quota": "52,17",
+        "coordinates": [
+            7.150038530594616,
+            51.245091042975446
+        ],
+        "total_professors_combined": 300.0,
+        "total_female_quota": 32.33333333333333
+    },
+    {
+        "name": "Universität Duisburg-Essen",
+        "rang": 13,
+        "total_professors": 395,
+        "female_professors": 120,
+        "female_quota": "30,38",
+        "junior_professors": "29",
+        "female_junior_professors": "15",
+        "junior_female_quota": "51,72",
+        "coordinates": [
+            7.150467684017425,
+            51.24506417837942
+        ],
+        "total_professors_combined": 424.0,
+        "total_female_quota": 31.839622641509436
+    },
+    {
+        "name": "Universität zu Köln",
+        "rang": 14,
+        "total_professors": 621,
+        "female_professors": 186,
+        "female_quota": "29,95",
+        "junior_professors": "49",
+        "female_junior_professors": "27",
+        "junior_female_quota": "55,10",
+        "coordinates": [
+            6.929618253069187,
+            50.92910126579348
+        ],
+        "total_professors_combined": 670.0,
+        "total_female_quota": 31.791044776119403
+    },
+    {
+        "name": "FernUniversität in Hagen",
+        "rang": 15,
+        "total_professors": 98,
+        "female_professors": 29,
+        "female_quota": "29,59",
+        "junior_professors": "5",
+        "female_junior_professors": "3",
+        "junior_female_quota": "60,00",
+        "coordinates": [
+            7.495236176181825,
+            51.377209822781374
+        ],
+        "total_professors_combined": 103.0,
+        "total_female_quota": 31.06796116504854
+    },
+    {
+        "name": "Eberhard Karls Universität Tübingen",
+        "rang": 16,
+        "total_professors": 551,
+        "female_professors": 163,
+        "female_quota": "29,58",
+        "junior_professors": "55",
+        "female_junior_professors": "33",
+        "junior_female_quota": "60,00",
+        "coordinates": [
+            9.06085261247395,
+            48.52583928518512
+        ],
+        "total_professors_combined": 606.0,
+        "total_female_quota": 32.34323432343234
+    },
+    {
+        "name": "Georg-August-Universität Göttingen",
+        "rang": 16,
+        "total_professors": 382,
+        "female_professors": 113,
+        "female_quota": "29,58",
+        "junior_professors": "19",
+        "female_junior_professors": "9",
+        "junior_female_quota": "47,37",
+        "coordinates": [
+            9.939912590010964,
+            51.54210804027535
+        ],
+        "total_professors_combined": 401.0,
+        "total_female_quota": 30.423940149625935
+    },
+    {
+        "name": "Christian-Albrechts-Universität zu Kiel",
+        "rang": 18,
+        "total_professors": 481,
+        "female_professors": 140,
+        "female_quota": "29,11",
+        "junior_professors": "34",
+        "female_junior_professors": "17",
+        "junior_female_quota": "50,00",
+        "coordinates": [
+            10.114943263922973,
+            54.34410755074946
+        ],
+        "total_professors_combined": 515.0,
+        "total_female_quota": 30.485436893203882
+    },
+    {
+        "name": "Philipps-Universität Marburg",
+        "rang": 19,
+        "total_professors": 331,
+        "female_professors": 95,
+        "female_quota": "28,70",
+        "junior_professors": "16",
+        "female_junior_professors": "7",
+        "junior_female_quota": "43,75",
+        "coordinates": [
+            8.774471245024735,
+            50.81069718280345
+        ],
+        "total_professors_combined": 347.0,
+        "total_female_quota": 29.394812680115272
+    },
+    {
+        "name": "Universität Leipzig",
+        "rang": 20,
+        "total_professors": 469,
+        "female_professors": 134,
+        "female_quota": "28,57",
+        "junior_professors": "36",
+        "female_junior_professors": "21",
+        "junior_female_quota": "58,33",
+        "coordinates": [
+            12.378118138619532,
+            51.33910954424906
+        ],
+        "total_professors_combined": 505.0,
+        "total_female_quota": 30.693069306930692
+    },
+    {
+        "name": "Julius-Maximilians-Universität Würzburg",
+        "rang": 21,
+        "total_professors": 374,
+        "female_professors": 106,
+        "female_quota": "28,34",
+        "junior_professors": "38",
+        "female_junior_professors": "23",
+        "junior_female_quota": "60,53",
+        "coordinates": [
+            9.935603282813123,
+            49.78818094357036
+        ],
+        "total_professors_combined": 412.0,
+        "total_female_quota": 31.31067961165049
+    },
+    {
+        "name": "Technische Hochschule Köln",
+        "rang": 22,
+        "total_professors": 418,
+        "female_professors": 118,
+        "female_quota": "28,23",
+        "junior_professors": "0",
+        "female_junior_professors": "0",
+        "junior_female_quota": "0,00",
+        "coordinates": [
+            6.965916190607021,
+            50.92089745831279
+        ],
+        "total_professors_combined": 418.0,
+        "total_female_quota": 28.22966507177033
+    },
+    {
+        "name": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+        "rang": 23,
+        "total_professors": 627,
+        "female_professors": 175,
+        "female_quota": "27,91",
+        "junior_professors": "54",
+        "female_junior_professors": "35",
+        "junior_female_quota": "64,81",
+        "coordinates": [
+            7.087005298806701,
+            50.72728005596174
+        ],
+        "total_professors_combined": 681.0,
+        "total_female_quota": 30.837004405286343
+    },
+    {
+        "name": "Albert-Ludwigs-Universität Freiburg im Breisgau",
+        "rang": 24,
+        "total_professors": 440,
+        "female_professors": 122,
+        "female_quota": "27,73",
+        "junior_professors": "32",
+        "female_junior_professors": "15",
+        "junior_female_quota": "46,88",
+        "coordinates": [
+            7.8459381086253455,
+            47.99423628850102
+        ],
+        "total_professors_combined": 472.0,
+        "total_female_quota": 29.02542372881356
+    },
+    {
+        "name": "Technische Universität Dortmund",
+        "rang": 25,
+        "total_professors": 295,
+        "female_professors": 81,
+        "female_quota": "27,46",
+        "junior_professors": "28",
+        "female_junior_professors": "11",
+        "junior_female_quota": "39,29",
+        "coordinates": [
+            7.415281672463075,
+            51.48958548626047
+        ],
+        "total_professors_combined": 323.0,
+        "total_female_quota": 28.482972136222912
+    },
+    {
+        "name": "Johannes Gutenberg-Universität Mainz",
+        "rang": 26,
+        "total_professors": 581,
+        "female_professors": 157,
+        "female_quota": "27,02",
+        "junior_professors": "40",
+        "female_junior_professors": "22",
+        "junior_female_quota": "55,00",
+        "coordinates": [
+            8.24142641421558,
+            49.99299850855445
+        ],
+        "total_professors_combined": 621.0,
+        "total_female_quota": 28.824476650563607
+    },
+    {
+        "name": "Gottfried Wilhelm Leibniz Universität Hannover",
+        "rang": 27,
+        "total_professors": 343,
+        "female_professors": 92,
+        "female_quota": "26,82",
+        "junior_professors": "11",
+        "female_junior_professors": "6",
+        "junior_female_quota": "54,55",
+        "coordinates": [
+            9.717780462237164,
+            52.38274505206714
+        ],
+        "total_professors_combined": 354.0,
+        "total_female_quota": 27.683615819209038
+    },
+    {
+        "name": "Ludwig-Maximilians-Universität München",
+        "rang": 28,
+        "total_professors": 807,
+        "female_professors": 213,
+        "female_quota": "26,39",
+        "junior_professors": "7",
+        "female_junior_professors": "3",
+        "junior_female_quota": "42,86",
+        "coordinates": [
+            11.580032520120561,
+            48.15146204247497
+        ],
+        "total_professors_combined": 814.0,
+        "total_female_quota": 26.535626535626534
+    },
+    {
+        "name": "Universität Siegen",
+        "rang": 29,
+        "total_professors": 229,
+        "female_professors": 58,
+        "female_quota": "25,33",
+        "junior_professors": "19",
+        "female_junior_professors": "7",
+        "junior_female_quota": "36,84",
+        "coordinates": [
+            8.025929929766445,
+            50.91157025538616
+        ],
+        "total_professors_combined": 248.0,
+        "total_female_quota": 26.209677419354836
+    },
+    {
+        "name": "Technische Universität Carolo-Wilhelmina zu Braunschweig",
+        "rang": 30,
+        "total_professors": 242,
+        "female_professors": 59,
+        "female_quota": "24,38",
+        "junior_professors": "15",
+        "female_junior_professors": "6",
+        "junior_female_quota": "40,00",
+        "coordinates": [
+            10.52981742693626,
+            52.274442322209154
+        ],
+        "total_professors_combined": 257.0,
+        "total_female_quota": 25.291828793774318
+    },
+    {
+        "name": "Heinrich-Heine-Universität Düsseldorf",
+        "rang": 31,
+        "total_professors": 317,
+        "female_professors": 76,
+        "female_quota": "23,97",
+        "junior_professors": "13",
+        "female_junior_professors": "4",
+        "junior_female_quota": "30,77",
+        "coordinates": [
+            6.793788853838765,
+            51.19193165548657
+        ],
+        "total_professors_combined": 330.0,
+        "total_female_quota": 24.242424242424242
+    },
+    {
+        "name": "Technische Universität Dresden",
+        "rang": 32,
+        "total_professors": 533,
+        "female_professors": 125,
+        "female_quota": "23,45",
+        "junior_professors": "33",
+        "female_junior_professors": "14",
+        "junior_female_quota": "42,42",
+        "coordinates": [
+            13.7310099848356,
+            51.02939620205263
+        ],
+        "total_professors_combined": 566.0,
+        "total_female_quota": 24.558303886925795
+    },
+    {
+        "name": "Martin-Luther-Universität Halle-Wittenberg",
+        "rang": 33,
+        "total_professors": 337,
+        "female_professors": 78,
+        "female_quota": "23,15",
+        "junior_professors": "23",
+        "female_junior_professors": "6",
+        "junior_female_quota": "26,09",
+        "coordinates": [
+            11.969221250069278,
+            51.48719743780243
+        ],
+        "total_professors_combined": 360.0,
+        "total_female_quota": 23.333333333333332
+    },
+    {
+        "name": "Technische Universität Darmstadt",
+        "rang": 34,
+        "total_professors": 325,
+        "female_professors": 75,
+        "female_quota": "23,08",
+        "junior_professors": "31",
+        "female_junior_professors": "13",
+        "junior_female_quota": "41,94",
+        "coordinates": [
+            8.655805460696197,
+            49.875311956695235
+        ],
+        "total_professors_combined": 356.0,
+        "total_female_quota": 24.719101123595504
+    },
+    {
+        "name": "Universität Regensburg",
+        "rang": 35,
+        "total_professors": 365,
+        "female_professors": 83,
+        "female_quota": "22,74",
+        "junior_professors": "10",
+        "female_junior_professors": "6",
+        "junior_female_quota": "60,00",
+        "coordinates": [
+            12.095400521350557,
+            48.99705745221895
+        ],
+        "total_professors_combined": 375.0,
+        "total_female_quota": 23.733333333333334
+    },
+    {
+        "name": "Ruprecht-Karls-Universität Heidelberg",
+        "rang": 36,
+        "total_professors": 500,
+        "female_professors": 113,
+        "female_quota": "22,60",
+        "junior_professors": "27",
+        "female_junior_professors": "12",
+        "junior_female_quota": "44,44",
+        "coordinates": [
+            8.706640090451373,
+            49.410966685134746
+        ],
+        "total_professors_combined": 527.0,
+        "total_female_quota": 23.719165085388994
+    },
+    {
+        "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        "rang": 37,
+        "total_professors": 633,
+        "female_professors": 142,
+        "female_quota": "22,43",
+        "junior_professors": "42",
+        "female_junior_professors": "19",
+        "junior_female_quota": "45,24",
+        "coordinates": [
+            11.005444882107293,
+            49.59835628871077
+        ],
+        "total_professors_combined": 675.0,
+        "total_female_quota": 23.85185185185185
+    },
+    {
+        "name": "Rheinisch-Westfälische Technische Hochschule Aachen",
+        "rang": 38,
+        "total_professors": 569,
+        "female_professors": 127,
+        "female_quota": "22,32",
+        "junior_professors": "38",
+        "female_junior_professors": "18",
+        "junior_female_quota": "47,37",
+        "coordinates": [
+            6.077364230206023,
+            50.77849491091315
+        ],
+        "total_professors_combined": 607.0,
+        "total_female_quota": 23.88797364085667
+    },
+    {
+        "name": "Duale Hochschule Baden-Württemberg",
+        "rang": 39,
+        "total_professors": 809,
+        "female_professors": 177,
+        "female_quota": "21,88",
+        "junior_professors": "0",
+        "female_junior_professors": "0",
+        "junior_female_quota": "0,00",
+        "coordinates": [
+            9.202079791719903,
+            48.83032750902626
+        ],
+        "total_professors_combined": 809.0,
+        "total_female_quota": 21.878862793572313
+    },
+    {
+        "name": "Universität Stuttgart",
+        "rang": 40,
+        "total_professors": 292,
+        "female_professors": 55,
+        "female_quota": "18,84",
+        "junior_professors": "21",
+        "female_junior_professors": "5",
+        "junior_female_quota": "23,81",
+        "coordinates": [
+            9.172075490766606,
+            48.78342042853008
+        ],
+        "total_professors_combined": 313.0,
+        "total_female_quota": 19.169329073482427
+    },
+    {
+        "name": "Technische Hochschule Mittelhessen – THM",
+        "rang": 41,
+        "total_professors": 243,
+        "female_professors": 42,
+        "female_quota": "17,28",
+        "junior_professors": "0",
+        "female_junior_professors": "0",
+        "junior_female_quota": "0,00",
+        "coordinates": [
+            8.689867294468256,
+            50.600065965805825
+        ],
+        "total_professors_combined": 243.0,
+        "total_female_quota": 17.28395061728395
+    },
+    {
+        "name": "Karlsruher Institut für Technologie",
+        "rang": 42,
+        "total_professors": 385,
+        "female_professors": 63,
+        "female_quota": "16,36",
+        "junior_professors": "24",
+        "female_junior_professors": "8",
+        "junior_female_quota": "33,33",
+        "coordinates": [
+            8.412411544508466,
+            49.01022580662705
+        ],
+        "total_professors_combined": 409.0,
+        "total_female_quota": 17.359413202933986
+    },
+    {
+        "name": "Gesamt",
+        "rang": 0,
+        "total_professors": 17710,
+        "female_professors": 4949,
+        "female_quota": "27,94",
+        "junior_professors": "1057",
+        "female_junior_professors": "535",
+        "junior_female_quota": "50,61",
+        "coordinates": [],
+        "total_professors_combined": 18767.0,
+        "total_female_quota": 29.221505834709866
+    }
+]
