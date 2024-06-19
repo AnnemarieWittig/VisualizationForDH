@@ -26,6 +26,8 @@
     color: white;
 }
 
-body {
-    font-family: "Arial", sans-serif; /* Change "Arial" to your preferred font */
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
