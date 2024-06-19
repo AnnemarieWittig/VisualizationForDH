@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px 20px 0px 20px ;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-authors {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.authors-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.author {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.author img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,93 @@
+
+body {
+    font-family: "Arial", sans-serif; /* Change "Arial" to your preferred font */
+}
+
+.map-container {
+    width: auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Arrange children elements vertically */
+}
+
+.place-pointer {
+    stroke: black;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.bundesland {
+    stroke: #000;
+    stroke-width: 0.5px;
+    cursor: pointer;
+}
+
+.bundesland:hover {
+    fill: rgba(79, 79, 79, 0.178);
+}
+
+.map-area {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Arrange children elements vertically */
+    width: 100%; /* Ensure it takes the full width of the parent */
+    height: 100%; /* Ensure it takes the full height of the parent */
+}
+
+#legend-container {
+    display: flex;
+    align-items: center;
+    /* Vertically center the items */
+    margin-top: 20px;
+    /* Adjust as needed to center properly */
+}
+
+.legend-title {
+    margin-right: 1px;
+    padding-bottom: 28px;
+    /* Adjust spacing between title and legend */
+    font-size: 14px;
+    /* Adjust as needed */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.extra-content {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #d3d3d3;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    text-align: center;
+    font-size: 16px;
+    height: 60vh;
+    align-self: self-start;
+}
+
+.main-area {
+    display: flex;
+    flex-direction: row; /* Arrange children elements vertically */
+    align-items: center; /* Center the content horizontally */
+    width: 90%; /* Ensure it takes the full width of the parent */
+    padding-top: 20px;
+}
