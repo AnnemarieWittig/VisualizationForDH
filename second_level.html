@@ -29,73 +29,135 @@
             fill: none;
             stroke-width: 2px;
         }
-
+        /*TO-DO: change colors of subject according to first_level color scheme
+            * one colour for studi and prof of the same subject BUT different hue
+        */
         #Insgesamt_Studi {
             stroke: steelblue;
         }
 
-        .Insgesamt_Studi {
+        .legend-ins-studi {
             color: steelblue;
         }
 
         #Geist_Studi {
             stroke: rgb(88, 180, 70);
         }
+        
+        .legend-geist-studi {
+            color: rgb(88, 180, 70);;
+        }
 
         #R_W_S_Studi {
             stroke: red;
+        }
+
+        .legend-rws-studi {
+            color: red;
         }
 
         #Math_N_Studi {
             stroke: green;
         }
 
+        .legend-math-studi {
+            color: green;
+        }
+
         #Hum_Ges_Studi {
             stroke: blue;
+        }
+
+        .legend-hum-studi {
+            color: blue;
         }
 
         #A_F_E_Studi {
             stroke: purple;
         }
 
+        .legend-afe-studi {
+            color: purple;
+        }
+
         #Ing_Studi {
             stroke: brown;
+        }
+
+        .legend-ing-studi {
+            color: brown;
         }
 
         #Kunst_Studi {
             stroke: pink;
         }
 
+        .legend-kunst-studi {
+            color: pink;
+        }
+
         #Insgesamt_Prof {
             stroke: orange;
+        }
+
+        .legend-ins-prof {
+            color: orange;
         }
 
         #Geist_Prof {
             stroke: cyan;
         }
 
+        .legend-geist-prof {
+            color: cyan;
+        }
+
         #R_W_S_Prof {
             stroke: magenta;
+        }
+
+        .legend-rws-prof {
+            color: magenta;
         }
 
         #Math_N_Prof {
             stroke: lime;
         }
 
+        .legend-math-prof {
+            color: lime;
+        }
+
         #Hum_Ges_Prof {
             stroke: navy;
+        }
+
+        .legend-hum-prof {
+            color: navy;
         }
 
         #A_F_E_Prof {
             stroke: olive;
         }
 
+        .legend-afe-prof {
+            color: olive;
+        }
+
         #Ing_Prof {
             stroke: maroon;
         }
 
+        .legend-ing-prof {
+            color: maroon;
+        }
+
         #Kunst_Prof {
             stroke: teal;
+        }
+
+        .legend-kunst-prof {
+            color: teal;
         }
     </style>
 </head>
@@ -112,67 +174,67 @@
     <svg width="800" height="400"></svg>
     <div>
         <input type="checkbox" id="showStudentinnen">
-        <label for="showStudentinnen"  class="Insgesamt_Studi">Studentinnen mit Master insgesamt</label>
+        <label for="showStudentinnen"  class="legend-ins-studi">Studentinnen mit Master insgesamt</label>
     </div>
     <div>
         <input type="checkbox" id="showStudiGeist">
-        <label for="showStudiGeist">Studentinnen in Geisteswissenschften (mit Master)</label>
+        <label for="showStudiGeist" class="legend-geist-studi">Studentinnen in Geisteswissenschften</label>
     </div>
     <div>
         <input type="checkbox" id="showRwsStudi">
-        <label for="showRwsStudi">Studentinnen in R/W/S</label>
+        <label for="showRwsStudi" class="legend-rws-studi">Studentinnen in R/W/S</label>
     </div>
     <div>
         <input type="checkbox" id="showMathNStudi">
-        <label for="showMathNStudi">Studentinnen in Mathematik und Naturwissenschaften</label>
+        <label for="showMathNStudi" class="legend-math-studi">Studentinnen in Mathematik und Naturwissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showHumGesStudi">
-        <label for="showHumGesStudi">Studentinnen in Human- und Gesellschaftswissenschaften</label>
+        <label for="showHumGesStudi" class="legend-hum-studi">Studentinnen in Human- und Gesellschaftswissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showAFEStudi">
-        <label for="showAFEStudi">Studentinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
+        <label for="showAFEStudi" class="legend-afe-studi">Studentinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showIngStudi">
-        <label for="showIngStudi">Studentinnen in Ingenieurwissenschaften</label>
+        <label for="showIngStudi" class="legend-ing-studi">Studentinnen in Ingenieurwissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showKunstStudi">
-        <label for="showKunstStudi">Studentinnen in Kunstwissenschaften</label>
+        <label for="showKunstStudi" class="legend-kunst-studi">Studentinnen in Kunstwissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showProfessorinnen">
-        <label for="showProfessorinnen">Professorinnen insgesamt</label>
+        <label for="showProfessorinnen" class="legend-ins-prof">Professorinnen insgesamt</label>
     </div>
     <div>
         <input type="checkbox" id="showGeistProf">
-        <label for="showGeistProf">Professorinnen in Geisteswissenschaften</label>
+        <label for="showGeistProf" class="legend-geist-prof">Professorinnen in Geisteswissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showRwsProf">
-        <label for="showRwsProf">Professorinnen in R/W/S</label>
+        <label for="showRwsProf" class="legend-rws-prof">Professorinnen in R/W/S</label>
     </div>
     <div>
         <input type="checkbox" id="showMathNProf">
-        <label for="showMathNProf">Professorinnen in Mathematik und Naturwissenschaften</label>
+        <label for="showMathNProf" class="legend-math-prof">Professorinnen in Mathematik und Naturwissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showHumGesProf">
-        <label for="showHumGesProf">Professorinnen in Human- und Gesellschaftswissenschaften</label>
+        <label for="showHumGesProf" class="legend-hum-prof">Professorinnen in Human- und Gesellschaftswissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showAFEProf">
-        <label for="showAFEProf">Professorinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
+        <label for="showAFEProf" class="legend-afe-prof">Professorinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showIngProf">
-        <label for="showIngProf">Professorinnen in Ingenieurwissenschaften</label>
+        <label for="showIngProf" class="legend-ing-prof">Professorinnen in Ingenieurwissenschaften</label>
     </div>
     <div>
         <input type="checkbox" id="showKunstProf">
-        <label for="showKunstProf">Professorinnen in Kunstwissenschaften</label>
+        <label for="showKunstProf" class="legend-kunst-prof">Professorinnen in Kunstwissenschaften</label>
     </div>
 
     <footer>
@@ -180,6 +242,7 @@
     </footer>
 
     <script>
+        //TO-DO: change class names to css convention
         const margin = {top: 20, right: 30, bottom: 30, left: 40},
               width = 800 - margin.left - margin.right,
               height = 400 - margin.top - margin.bottom;
@@ -263,7 +326,7 @@
             keys.forEach((key, i) => {
                 svg.append("path")
                     .datum(data)
-                    .attr("class", "line")
+                    .attr("class", `line ${key}`)
                     .attr("id", key)
                     .attr("d", d3.line()
                         .x(d => x(d.Jahr))
