@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta name="description" content="Webpage description goes here" />
+    <meta name="description" content="Darstellung der Entwicklung der Anzahl von Studentinnen und Professorinnen" />
     <meta charset="utf-8">
-    <title>Change_me</title>
+    <title>Professorinnen und Studentinnen in Deutschland</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
     <link rel="stylesheet" href="css/nav-bar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -189,7 +190,7 @@
           .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
-        d3.csv("data2.csv").then(make_chart);
+        d3.csv("data/entwicklung.csv").then(make_chart);
 
         function make_chart(data) {     
             const keys = data.columns.slice(1);       
@@ -338,7 +339,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>
