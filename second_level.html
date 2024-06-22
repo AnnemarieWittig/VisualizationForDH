@@ -9,6 +9,94 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/nav-bar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .grid .tick {
+            color: lightgrey;
+            opacity: 0.7;
+        }
+        
+        .grid path {
+            stroke-width: 0;
+        }
+
+        .line {
+            display: none;
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        #Insgesamt_Studi {
+            stroke: steelblue;
+        }
+
+        .Insgesamt_Studi {
+            color: steelblue;
+        }
+
+        #Geist_Studi {
+            stroke: rgb(88, 180, 70);
+        }
+
+        #R_W_S_Studi {
+            stroke: red;
+        }
+
+        #Math_N_Studi {
+            stroke: green;
+        }
+
+        #Hum_Ges_Studi {
+            stroke: blue;
+        }
+
+        #A_F_E_Studi {
+            stroke: purple;
+        }
+
+        #Ing_Studi {
+            stroke: brown;
+        }
+
+        #Kunst_Studi {
+            stroke: pink;
+        }
+
+        #Insgesamt_Prof {
+            stroke: orange;
+        }
+
+        #Geist_Prof {
+            stroke: cyan;
+        }
+
+        #R_W_S_Prof {
+            stroke: magenta;
+        }
+
+        #Math_N_Prof {
+            stroke: lime;
+        }
+
+        #Hum_Ges_Prof {
+            stroke: navy;
+        }
+
+        #A_F_E_Prof {
+            stroke: olive;
+        }
+
+        #Ing_Prof {
+            stroke: maroon;
+        }
+
+        #Kunst_Prof {
+            stroke: teal;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,11 +107,236 @@
         <a class="nav-item" href="map_level.html">Map Level</a>
     </div>
 
+    <h1>Visualisierung der Anzahl der Studentinnen und Professorinnen</h1>
+    <svg width="800" height="400"></svg>
+    <div>
+        <input type="checkbox" id="showStudentinnen">
+        <label for="showStudentinnen"  class="Insgesamt_Studi">Studentinnen mit Master insgesamt</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showStudiGeist">
+        <label for="showStudiGeist">Studentinnen in Geisteswissenschften (mit Master)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showRwsStudi">
+        <label for="showRwsStudi">Studentinnen in R/W/S</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showMathNStudi">
+        <label for="showMathNStudi">Studentinnen in Mathematik und Naturwissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showHumGesStudi">
+        <label for="showHumGesStudi">Studentinnen in Human- und Gesellschaftswissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showAFEStudi">
+        <label for="showAFEStudi">Studentinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showIngStudi">
+        <label for="showIngStudi">Studentinnen in Ingenieurwissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showKunstStudi">
+        <label for="showKunstStudi">Studentinnen in Kunstwissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showProfessorinnen">
+        <label for="showProfessorinnen">Professorinnen insgesamt</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showGeistProf">
+        <label for="showGeistProf">Professorinnen in Geisteswissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showRwsProf">
+        <label for="showRwsProf">Professorinnen in R/W/S</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showMathNProf">
+        <label for="showMathNProf">Professorinnen in Mathematik und Naturwissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showHumGesProf">
+        <label for="showHumGesProf">Professorinnen in Human- und Gesellschaftswissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showAFEProf">
+        <label for="showAFEProf">Professorinnen in Agrar-, Forst- und Ernährungswissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showIngProf">
+        <label for="showIngProf">Professorinnen in Ingenieurwissenschaften</label>
+    </div>
+    <div>
+        <input type="checkbox" id="showKunstProf">
+        <label for="showKunstProf">Professorinnen in Kunstwissenschaften</label>
+    </div>
+
     <footer>
         <p>&copy; 2024 Visualization for DH Project - Group 1. </p>
     </footer>
 
     <script>
+        const margin = {top: 20, right: 30, bottom: 30, left: 40},
+              width = 800 - margin.left - margin.right,
+              height = 400 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("data2.csv").then(make_chart);
+
+        function make_chart(data) {     
+            const keys = data.columns.slice(1);       
+            data.forEach(d => {
+                d.Jahr = +d.Jahr;   // convert to number
+                d.Insgesamt_Studi = +d.Insgesamt_Studi;
+                d.Geist_Studi = +d.Geist_Studi;
+                d.R_W_S_Studi = +d.R_W_S_Studi;
+                d.Math_N_Studi = +d.Math_N_Studi;
+                d.Hum_Ges_Studi = +d.Hum_Ges_Studi;
+                d.A_F_E_Studi = +d.A_F_E_Studi;
+                d.Ing_Studi = +d.Ing_Studi;
+                d.Kunst_Studi = +d.Kunst_Studi;
+                d.Insgesamt_Prof = +d.Insgesamt_Prof;
+                d.Geist_Prof = +d.Geist_Prof;
+                d.R_W_S_Prof = +d.R_W_S_Prof;
+                d.Math_N_Prof = +d.Math_N_Prof;
+                d.Hum_Ges_Prof = +d.Hum_Ges_Prof;
+                d.A_F_E_Prof = +d.A_F_E_Prof;
+                d.Ing_Prof = +d.Ing_Prof;
+                d.Kunst_Prof = +d.Kunst_Prof;
+            });
+
+            // Create x-axis with years as numerical values as labels
+            var x = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.Jahr))
+                .range([0, width]);
+
+            // format the tick labels as integers
+            const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
+
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(xAxis);
+
+            // create y axis with number of students/professors als labels
+            var y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => Math.max(d.Insgesamt_Studi, d.Geist_Studi, d.R_W_S_Studi, d.Math_N_Studi, d.Hum_Ges_Studi, d.A_F_E_Studi, d.Ing_Studi, d.Kunst_Studi, d.Insgesamt_Prof, d.Geist_Prof, d.R_W_S_Prof, d.Math_N_Prof, d.Hum_Ges_Prof, d.A_F_E_Prof, d.Ing_Prof, d.Kunst_Prof))])
+                .nice() // round axis numbers
+                .range([height, 0]);    
+
+            const yAxis = d3.axisLeft(y);
+
+            svg.append("g")
+                .call(yAxis);
+
+            // Create gridlines
+            function makeXGridlines() {
+                return d3.axisBottom(x).ticks(10);
+            }
+            function makeYGridlines () {
+                return d3.axisLeft(y).ticks(10);
+            }
+           
+            // Add g element containing the x grid lines (vertical grid lines)
+            svg.append("g")
+                .attr("class", "grid")
+                .call(makeXGridlines()
+                    .tickSize(height)
+                    .tickFormat(""));   // add empty strings as labels for the ticks
+
+            // Add g element containing the y grid lines (horizontal grid lines)
+            svg.append("g")
+                .attr("class", "grid")
+                .call(makeYGridlines()
+                    .tickSize(-width)   // draw grid lines from left to right
+                    .tickFormat(""));
+          
+            //create the lines for the professors/students and subjects
+            keys.forEach((key, i) => {
+                svg.append("path")
+                    .datum(data)
+                    .attr("class", "line")
+                    .attr("id", key)
+                    .attr("d", d3.line()
+                        .x(d => x(d.Jahr))
+                        .y(d => y(d[key])));
+            });  
+            
+            // functionality to display or hide the line for total number of students
+            document.getElementById('showStudentinnen').addEventListener('change', function () {
+                document.getElementById("Insgesamt_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            // functionality to display or hide the line for total number of students (humanities)
+            document.getElementById('showStudiGeist').addEventListener('change', function () {
+                document.getElementById("Geist_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            // Event listeners for the checkboxes
+            document.getElementById('showRwsStudi').addEventListener('change', function () {
+                document.getElementById("R_W_S_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showMathNStudi').addEventListener('change', function () {
+                document.getElementById("Math_N_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showHumGesStudi').addEventListener('change', function () {
+                document.getElementById("Hum_Ges_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showAFEStudi').addEventListener('change', function () {
+                document.getElementById("A_F_E_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showIngStudi').addEventListener('change', function () {
+                document.getElementById("Ing_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showKunstStudi').addEventListener('change', function () {
+                document.getElementById("Kunst_Studi").style.display = this.checked ? "block" : "none";
+            });
+
+            // functionality to display or hide the line for total number of professors
+            document.getElementById('showProfessorinnen').addEventListener('change', function () {
+                document.getElementById("Insgesamt_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showGeistProf').addEventListener('change', function () {
+                document.getElementById("Geist_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showRwsProf').addEventListener('change', function () {
+                document.getElementById("R_W_S_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showMathNProf').addEventListener('change', function () {
+                document.getElementById("Math_N_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showHumGesProf').addEventListener('change', function () {
+                document.getElementById("Hum_Ges_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showAFEProf').addEventListener('change', function () {
+                document.getElementById("A_F_E_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showIngProf').addEventListener('change', function () {
+                document.getElementById("Ing_Prof").style.display = this.checked ? "block" : "none";
+            });
+
+            document.getElementById('showKunstProf').addEventListener('change', function () {
+                document.getElementById("Kunst_Prof").style.display = this.checked ? "block" : "none";
+            });
+        }
     </script>
 
 </body>
