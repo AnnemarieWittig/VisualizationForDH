@@ -4,11 +4,22 @@
 <head>
     <meta name="description" content="Webpage description goes here" />
     <meta charset="utf-8">
-    <title>Change_me</title>
+    <title>Geschlechterverteilung Fachrichtungen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="script/script_first_level.js"></script>
     <link rel="stylesheet" href="css/nav-bar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+        .chart-container{
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,6 +30,11 @@
         <a class="nav-item" href="map_level.html">Map Level</a>
     </div>
 
+    <h1>Männlich/Weiblich Verteilungen der Professor*innen in verschiedenen Fachrichtungen</h1>
+
+    <div class="chart-container">
+        <svg></svg>
+    </div>
 
     <footer>
         <p>&copy; 2024 Visualization for DH Project - Group 1. </p>
