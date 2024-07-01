@@ -22,6 +22,7 @@ h1 {
 .container-flex {
     display: flex;
     padding: 10px;
+    max-width: 1400px;
 }
 
 .container-flex svg {
@@ -30,12 +31,18 @@ h1 {
 
 .container-checkboxes {
     flex: 1;
-    padding: 10px;
+    padding: 0 10px 5px 10px;
+    margin-top: -20px;
     position: relative;
 } 
 
 .container-checkboxes input[type="checkbox"] {
     margin-right: 10px;
+}
+
+.checkbox-grouping{
+    border-style: groove;
+    padding: 10px;
 }
 
 .line {
