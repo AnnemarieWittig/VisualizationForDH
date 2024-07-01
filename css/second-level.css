@@ -52,19 +52,19 @@ h1 {
 }
 
 #Insgesamt_Studi {
-    stroke: #C70039;
+    stroke: #FF5733;
 }
 
 .legend-ins-studi {
-    color: #C70039;
+    color: #FF5733;
 }
 
 #Geist_Studi {
-    stroke: #1B4F72;
+    stroke: #3498DB;
 }
 
 .legend-geist-studi {
-    color: #1B4F72;
+    color: #3498DB;
 }
 
 #R_W_S_Studi {
@@ -116,11 +116,11 @@ h1 {
 }
 
 #Insgesamt_Prof {
-    stroke: #FF5733;
+    stroke:  #C70039;
 }
 
 .legend-ins-prof {
-    color: #FF5733;
+    color:  #C70039;
 }
 
 #Geist_Prof {
