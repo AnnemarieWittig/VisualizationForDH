@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    d3.json("data/map/first_level_data.json").then(function(data) {
+    d3.json("data/first_level/first_level_data.json").then(function(data) {
         const width = 700;
         const height = width;
         const innerRadius = 180;
