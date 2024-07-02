@@ -53,6 +53,11 @@ h1 {
     padding: 10px;
 }
 
+.chart-container {
+    margin-left: 10px;
+    width: 100%;
+}
+
 .line {
     display: none;
     fill: none;
