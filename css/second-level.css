@@ -31,7 +31,6 @@ h1 {
 .container-flex {
     display: flex;
     padding: 10px;
-    max-width: 1400px;
 }
 
 .container-flex svg {
