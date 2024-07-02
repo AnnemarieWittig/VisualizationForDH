@@ -10,181 +10,7 @@
     <link rel="stylesheet" href="css/nav-bar.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        footer {            
-                margin-top: 25vh;
-        }
-        
-        h1 {
-            padding-left: 5px;
-        }
-
-        .grid .tick {
-            color: lightgrey;
-            opacity: 0.7;
-        }
-        
-        .grid path {
-            stroke-width: 0;
-        }
-
-        .container-flex {
-            display: flex;
-            padding: 10px;
-        }
-
-        .container-flex svg {
-            flex: 1.5;
-        }
-
-        .container-checkboxes {
-            flex: 1;
-            padding: 10px;
-            position: relative;
-        } 
-
-        .container-checkboxes input[type="checkbox"] {
-            margin-right: 10px;
-        }
-
-        .line {
-            display: none;
-            fill: none;
-            stroke-width: 2px;
-        }
-
-        #Insgesamt_Studi {
-            stroke: #C70039;
-        }
-
-        .legend-ins-studi {
-            color: #C70039;
-        }
-
-        #Geist_Studi {
-            stroke: #1B4F72;
-        }
-        
-        .legend-geist-studi {
-            color: #1B4F72;
-        }
-
-        #R_W_S_Studi {
-            stroke: #28B463;
-        }
-
-        .legend-rws-studi {
-            color: #28B463;
-        }
-
-        #Math_N_Studi {
-            stroke: #F4D03F;
-        }
-
-        .legend-math-studi {
-            color: #F4D03F;
-        }
-
-        #Hum_Ges_Studi {
-            stroke: #8E44AD;
-        }
-
-        .legend-hum-studi {
-            color: #8E44AD;
-        }
-
-        #A_F_E_Studi {
-            stroke: #E67E22;
-        }
-
-        .legend-afe-studi {
-            color: #E67E22;
-        }
-
-        #Ing_Studi {
-            stroke: #FF69B4;
-        }
-
-        .legend-ing-studi {
-            color: #FF69B4;
-        }
-
-        #Kunst_Studi {
-            stroke: #A0522D;
-        }
-
-        .legend-kunst-studi {
-            color: #A0522D;
-        }
-
-        #Insgesamt_Prof {
-            stroke: #FF5733;
-        }
-
-        .legend-ins-prof {
-            color: #FF5733;
-        }
-
-        #Geist_Prof {
-            stroke: #1B4F72;
-        }
-
-        .legend-geist-prof {
-            color: #1B4F72;
-        }
-
-        #R_W_S_Prof {
-            stroke: #145A32;
-        }
-
-        .legend-rws-prof {
-            color: #145A32;
-        }
-
-        #Math_N_Prof {
-            stroke: #9A7D0A;
-        }
-
-        .legend-math-prof {
-            color: #9A7D0A;
-        }
-
-        #Hum_Ges_Prof {
-            stroke: #4A235A;
-        }
-
-        .legend-hum-prof {
-            color: #4A235A;
-        }
-
-        #A_F_E_Prof {
-            stroke: #D35400;
-        }
-
-        .legend-afe-prof {
-            color: #D35400;
-        }
-
-        #Ing_Prof {
-            stroke: #C71585;
-        }
-
-        .legend-ing-prof {
-            color: #C71585;
-        }
-
-        #Kunst_Prof {
-            stroke: #4B2E1A;
-        }
-
-        .legend-kunst-prof {
-            color: #4B2E1A;
-        }
-    </style>
+    <link rel="stylesheet" href="css/second-level.css">
 </head>
 
 <body>
@@ -199,69 +25,73 @@
     <div class="container-flex">
         <svg width="800" height="400"></svg>
         <div class="container-checkboxes">
-            <div>
-                <input type="checkbox" id="showStudentinnen">
-                <label for="showStudentinnen"  class="legend-ins-studi">Studentinnen mit Master insgesamt</label>
+            <div class="checkbox-grouping">
+                <div>
+                    <input type="checkbox" id="showStudentinnen">
+                    <label for="showStudentinnen"  class="legend-ins-studi">Studentinnen mit Master insgesamt</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showStudiGeist">
+                    <label for="showStudiGeist" class="legend-geist-studi">Studentinnen in Geisteswissenschften und Sport</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showRwsStudi">
+                    <label for="showRwsStudi" class="legend-rws-studi">Studentinnen in Rechts-, Wirtschafts- und Sozialwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showMathNStudi">
+                    <label for="showMathNStudi" class="legend-math-studi">Studentinnen in Mathematik und Naturwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showHumGesStudi">
+                    <label for="showHumGesStudi" class="legend-hum-studi">Studentinnen in Humanmedizin und Gesundheitswissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showAFEStudi">
+                    <label for="showAFEStudi" class="legend-afe-studi">Studentinnen in Agrar-, Forst- und Ernährungswissenschaften und Veterinärmedizin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showIngStudi">
+                    <label for="showIngStudi" class="legend-ing-studi">Studentinnen in Ingenieurwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showKunstStudi">
+                    <label for="showKunstStudi" class="legend-kunst-studi">Studentinnen in Kunst und Kunstwissenschaften</label>
+                </div>
             </div>
-            <div>
-                <input type="checkbox" id="showStudiGeist">
-                <label for="showStudiGeist" class="legend-geist-studi">Studentinnen in Geisteswissenschften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showRwsStudi">
-                <label for="showRwsStudi" class="legend-rws-studi">Studentinnen in Rechts-, Wirtschafts- und Sozialwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showMathNStudi">
-                <label for="showMathNStudi" class="legend-math-studi">Studentinnen in Mathematik und Naturwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showHumGesStudi">
-                <label for="showHumGesStudi" class="legend-hum-studi">Studentinnen in Humanmedizin und Gesundheitswissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showAFEStudi">
-                <label for="showAFEStudi" class="legend-afe-studi">Studentinnen in Agrar-, Forst- und Ernährungswissenschaften und Veterinärmedizin</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showIngStudi">
-                <label for="showIngStudi" class="legend-ing-studi">Studentinnen in Ingenieurwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showKunstStudi">
-                <label for="showKunstStudi" class="legend-kunst-studi">Studentinnen in Kunst und Kunstwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showProfessorinnen">
-                <label for="showProfessorinnen" class="legend-ins-prof">Professorinnen insgesamt</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showGeistProf">
-                <label for="showGeistProf" class="legend-geist-prof">Professorinnen in Geisteswissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showRwsProf">
-                <label for="showRwsProf" class="legend-rws-prof">Professorinnen in Rechts-, Wirtschafts- und Sozialwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showMathNProf">
-                <label for="showMathNProf" class="legend-math-prof">Professorinnen in Mathematik und Naturwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showHumGesProf">
-                <label for="showHumGesProf" class="legend-hum-prof">Professorinnen in Humanmedizin und Gesundheitswissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showAFEProf">
-                <label for="showAFEProf" class="legend-afe-prof">Professorinnen in Agrar-, Forst- und Ernährungswissenschaften und Veterinärmedizin</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showIngProf">
-                <label for="showIngProf" class="legend-ing-prof">Professorinnen in Ingenieurwissenschaften</label>
-            </div>
-            <div>
-                <input type="checkbox" id="showKunstProf">
-                <label for="showKunstProf" class="legend-kunst-prof">Professorinnen in Kunst und Kunstwissenschaften</label>
+            <div class="checkbox-grouping">
+                <div>
+                    <input type="checkbox" id="showProfessorinnen">
+                    <label for="showProfessorinnen" class="legend-ins-prof">Professorinnen insgesamt</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showGeistProf">
+                    <label for="showGeistProf" class="legend-geist-prof">Professorinnen in Geisteswissenschaften und Sport</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showRwsProf">
+                    <label for="showRwsProf" class="legend-rws-prof">Professorinnen in Rechts-, Wirtschafts- und Sozialwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showMathNProf">
+                    <label for="showMathNProf" class="legend-math-prof">Professorinnen in Mathematik und Naturwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showHumGesProf">
+                    <label for="showHumGesProf" class="legend-hum-prof">Professorinnen in Humanmedizin und Gesundheitswissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showAFEProf">
+                    <label for="showAFEProf" class="legend-afe-prof">Professorinnen in Agrar-, Forst- und Ernährungswissenschaften und Veterinärmedizin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showIngProf">
+                    <label for="showIngProf" class="legend-ing-prof">Professorinnen in Ingenieurwissenschaften</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="showKunstProf">
+                    <label for="showKunstProf" class="legend-kunst-prof">Professorinnen in Kunst und Kunstwissenschaften</label>
+                </div>
             </div>
         </div>
     </div>
@@ -271,7 +101,6 @@
     </footer>
 
     <script>
-        //TO-DO: change class names to css convention
         const margin = {top: 20, right: 30, bottom: 30, left: 40};
         const width = 800 - margin.left - margin.right;
         const height = 400 - margin.top - margin.bottom;
