@@ -3,6 +3,16 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 5vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.map-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
 }

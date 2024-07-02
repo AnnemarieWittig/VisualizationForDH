@@ -28,6 +28,7 @@
         <a class="nav-item active" href="map_level.html">Map Level</a>
     </div>
 
+    <h1>Visualisierung der Anteile an weiblichen Professorinnen in den Bundesländern</h1>
     <div class="main-area">
         <div class="map-area">
             <div id="map" class="map-container"></div>
@@ -50,7 +51,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="map-footer">
         <p>&copy; 2024 Visualization for DH Project - Group 1. </p>
     </footer>
     <script>
@@ -150,7 +151,7 @@
             // Dimensions for the map
             let element = document.getElementsByClassName('main-area');
 
-            let height = element[0].offsetHeight > 600 ? element[0].offsetHeight : 600;
+            let height = element[0].offsetHeight - 30 > 600 ? element[0].offsetHeight - 30 : 600;
             let width = height * 0.75 > 450 ? height * 0.75 : 450;
 
             // Create an SVG element

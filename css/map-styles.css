@@ -64,7 +64,7 @@ body {
     display: flex;
     align-items: center;
     /* Vertically center the items */
-    margin-top: 20px;
+    margin-bottom: 20px;
     /* Adjust as needed to center properly */
 }
 
